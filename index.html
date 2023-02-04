@@ -12,7 +12,7 @@
         
         <meta name="description" content="Модифицированный Скрининговый Тест на Аутизм для Детей
         (пересмотренный, с дополнительным пошаговым интервью)">
-        <link rel="manifest" crossorigin="use-credentials" href="manifest.json">
+        <link rel="manifest" crossorigin="use-credentials" href="manifest.webmanifest">
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link
@@ -36,6 +36,11 @@
             }
             #noBtn {
                 width: 100px;
+            }
+            .add-button {
+            position: absolute;
+            top: 1px;
+            left: 1px;
             }
         </style>
     </head>
@@ -67,6 +72,7 @@
               <button id="yesBtn" class="btn btn-success">ООБА</button>
               <button id="noBtn" class="btn btn-danger">ЖОК</button>
             </div>
+            <button class="add-button">Add to home screen</button>
           </div>
         <script src="js/main.js" async defer></script>
     </body>
