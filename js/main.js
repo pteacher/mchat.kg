@@ -41,7 +41,7 @@ fetch('questions.json')
   .then(questions => {
     // Store the questions in a variable
     let currentQuestion = 0;
-    let points = 20;
+    let points = 17;
 
     // Function to display the next question
     const displayQuestion = () => {
@@ -60,7 +60,11 @@ fetch('questions.json')
 
       // If there are no more questions, show a message
       if (currentQuestion === questions.length) {
-        alert(`You have earned ${points} points!`);
+        let risk = "НИЗКИЙ РИСК";
+        if (points > 2 & points < 8) { risk = "СРЕДНИЙ РИСК" }
+        else if (points > 8) { risk = "ВЫСОКИЙ РИСК"}
+        $('#testResult').text(risk + ` (${points} баллов)`);
+        $('#resultModal').modal('toggle')
         return;
       }
 
@@ -73,10 +77,15 @@ fetch('questions.json')
       // Move to the next question
       updateProgressBar(currentQuestion + 1, questions.length);
       currentQuestion++;
+      
 
       // If there are no more questions, show a message
       if (currentQuestion === questions.length) {
-        alert(`You have earned ${points} points!`);
+        let risk = "НИЗКИЙ РИСК";
+        if (points > 2 & points < 8) { risk = "СРЕДНИЙ РИСК" }
+        else if (points > 8) { risk = "ВЫСОКИЙ РИСК"}
+        $('#testResult').text(risk + ` (${points} баллов)`);
+        $('#resultModal').modal('toggle')
         return;
       }
 
