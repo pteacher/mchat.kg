@@ -1,0 +1,21 @@
+{
+    "short_name": "mCHAT",
+    "name": "Модифицированный Скрининговый Тест на Аутизм для Детей",
+    "icons": [
+      {
+        "src": "/icon-192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/icon-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#fff",
+    "theme_color": "#3f51b5"
+  }
+  
